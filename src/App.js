@@ -3,13 +3,9 @@ import React,{useRef }from 'react';
 import {BrowserRouter as Router,Routes,Route,Link, } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import ProjectSlider from "./Projects";
-import Contact from "./Contact";
 import {FaBars, FaTimes} from "react-icons/fa";
 
-
 function App() {
-  
   const navRef = useRef();
 
   const showNavBar = () => {
@@ -20,10 +16,8 @@ function App() {
     navRef.current.classList.remove("responsive-nav")
   }
 
-
   return (
     <Router >
-
     <header className="header">
     <button className="the-btn-open" onClick={showNavBar}>
         <FaBars/>
@@ -42,18 +36,13 @@ function App() {
         </button>
         </nav>
         </header>
-    
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/project" element={<ProjectSlider />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </Router>
-
-    
   );
 }
-
 export default App;

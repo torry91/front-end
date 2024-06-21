@@ -67,7 +67,7 @@ const Home = () => {
             siteUrl: "https://the-food-analysis.netlify.app",
         },
     ];
-    
+
     return (
         <div className="main">
             <h1>Front-End Developer</h1>
@@ -110,7 +110,6 @@ const Home = () => {
                     </div>
                 </div>
 
-        
                 <div className='space'></div>
                 <div className='container2'>
                 <h1 className='titleContact project-list'>Contact</h1>
