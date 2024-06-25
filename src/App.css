@@ -9,7 +9,7 @@ html {
 body {
   background-color: #F6F5F2;
   font-family: "Poppins", sans-serif;
-  border-radius: 20%;
+  border-radius: 0%;
   margin: 0;
   padding: 0;
 }
@@ -22,12 +22,13 @@ body {
   width: 100%;
   font-size: 17px;
   padding: 15px 40px 15px 50px;
-  border-radius: 30px;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 .logo {
   color: #2d2e32;
-  cursor: pointer;
   margin-right: auto;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -59,6 +60,10 @@ h2{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 7%;
+  
+  
+  
 }
 .btn{
   padding: 10px;
@@ -98,7 +103,7 @@ a{
   transition: transform 0.3s ease;
 }
 
-p {
+p{
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -116,7 +121,7 @@ p {
   padding: 20px;
 }
 
-.the-btn-open, .the-btn-close {
+.the-btn-open, .btn-close {
   display: none;
 }
 
@@ -153,17 +158,33 @@ p {
   padding: 40px;
 }
 
+
 @media only screen and (max-width: 1024px){
-  
-  .the-btn-open,
-  .the-btn-close {
+  .btn-close {
     visibility: visible;
-    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 9%;
+    border: none;
+    background-color: #A3C9AA;
+    color: #2d2e32;
+    cursor: pointer;
+    z-index: 1001; 
   }
 
   .the-btn-open {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    display: block; 
   }
+
+  .close-sign{
+  display: flex;
+  justify-content: flex-end;
+}
 
   .nav {
     flex-direction: column;
@@ -176,13 +197,13 @@ p {
     width: 100%;
     background-color: #fff;
     padding: 20px;
-   display: none;
+    display: none;
     transition: all .5s ease-in-out;
     z-index: 1000;
   }
+
   .nav.responsive-nav {
     display: flex;
-
   }
 
   .links {
@@ -206,7 +227,17 @@ p {
     transform: translateY(0);
   }
 
-  .link:hover {
-    color: #799351;
+  .link:hover , .btn-close:hover {
+    background-color: #F6E6CB;
   }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lastPic{
+    width: 350px;
+  }
+
 }

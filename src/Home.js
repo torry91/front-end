@@ -115,16 +115,16 @@ const Home = () => {
                 <h1 className='titleContact project-list'>Contact</h1>
                 <div className='info'>
                     <div className='image'>
-                <img src={image} alt="pic" width="450px" height="350px"/>
+                <img src={image} className="lastPic"alt="pic" width="450px" height="350px"/>
                 </div>
                 <div id="contact-section" className="reach">
-            
-            <h2>Reach out to me</h2>
-            <p>victoriabadrajann@gmail.com</p>
-            <p> Location : Roswell , GA , USA</p>
-            <p> +1 407 394 0017 </p>
-            </div>
+                    <h2>Reach out to me</h2>
+                    <p>victoriabadrajann@gmail.com</p>
+                    <p> Location : Roswell , GA , USA</p>
+                    <p> +1 407 394 0017 </p>
+                    </div>
             <div className='space'></div>
+        
         </div>
         </div>
         </div>
